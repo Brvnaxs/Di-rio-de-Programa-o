@@ -23,7 +23,7 @@ function listar(lista){
     //Cria um for para percorrer toda a lista
     for(i = 0; i < lista.length; i++){
         //Vai acessar o indice da lista('i') que seram os usuários e acessa as chaves de cada dado do usuário(coloca o nome da chave ex: [idade])
-        console.log('ID: ',i,'Nome: ',lista[i]["Nome"],'Idade: ',lista[i]["Idade"],'Sexo: ',lista[i]["Sexo"],'Endereço: ',lista[i]["Endereco"])
+        console.log('ID: ',i,'|Nome: ',lista[i]["Nome"],'|Idade: ',lista[i]["Idade"],'|Sexo: ',lista[i]["Sexo"],'|Endereço: ',lista[i]["Endereco"])
 
 }
 }
@@ -40,13 +40,13 @@ while(escolha != "0"){
         console.log("Por fim, informe seu endereço:")
         const end = {
             Rua: read.question("Rua: "),
-            Número: parseInt(read.question("N°: ")),
+            Nº: parseInt(read.question("Nº: ")),
             Cidade: read.question("Cidade: "), 
             Estado: read.question("UF: ")
         }
         cadastrar(nome,idade,sexo,end,lista_usuarios)
         armazenar(nomes_usuarios,nome)
-        console.log(lista_usuarios)
+        
     }
     else if(escolha == "2"){
         var r =parseInt(read.question("Informe o ID do usuário que deseja consultar: "))
